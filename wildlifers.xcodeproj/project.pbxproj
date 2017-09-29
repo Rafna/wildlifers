@@ -19,18 +19,31 @@
 		7DEBD0BA1F6EE00C00842E2A /* DataEntryCellType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DEBD0B91F6EE00C00842E2A /* DataEntryCellType.swift */; };
 		7DEBD0BC1F6F233D00842E2A /* DataEntryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DEBD0BB1F6F233D00842E2A /* DataEntryTableViewController.swift */; };
 		7DEBD0BE1F6F26D300842E2A /* DataEntryTablePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DEBD0BD1F6F26D300842E2A /* DataEntryTablePresenter.swift */; };
-		7DEBD0C01F6F27F100842E2A /* BooleanSwitchEntryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DEBD0BF1F6F27F100842E2A /* BooleanSwitchEntryCell.swift */; };
+		7DEBD0C01F6F27F100842E2A /* SwitchEntryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DEBD0BF1F6F27F100842E2A /* SwitchEntryCell.swift */; };
 		7DEBD0C31F6F281000842E2A /* TextEntryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DEBD0C21F6F281000842E2A /* TextEntryCell.swift */; };
 		7DEBD0C51F6F282700842E2A /* LocationEntryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DEBD0C41F6F282700842E2A /* LocationEntryCell.swift */; };
 		7DEBD0C71F6F284D00842E2A /* RadioButtonEntryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DEBD0C61F6F284D00842E2A /* RadioButtonEntryCell.swift */; };
 		7DEBD0C91F6F285600842E2A /* NumberEntryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DEBD0C81F6F285600842E2A /* NumberEntryCell.swift */; };
 		7DEBD0CB1F6F299200842E2A /* SubdatumSegueCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DEBD0CA1F6F299200842E2A /* SubdatumSegueCell.swift */; };
 		7DEBD0D11F785B4700842E2A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DEBD0D01F785B4700842E2A /* Main.storyboard */; };
-		7DEBD0D51F78709F00842E2A /* TextDisplayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DEBD0D41F78709F00842E2A /* TextDisplayCell.swift */; };
-		7DEBD0D71F78761900842E2A /* DataViewBinding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DEBD0D61F78761900842E2A /* DataViewBinding.swift */; };
 		7DEBD0D91F79D72E00842E2A /* CommonData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DEBD0D81F79D72E00842E2A /* CommonData.swift */; };
 		7DEBD0DB1F7AB91400842E2A /* AvailableModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DEBD0DA1F7AB91400842E2A /* AvailableModels.swift */; };
+		7DEBD0E41F7EAE2300842E2A /* unitspecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DEBD0E31F7EAE2300842E2A /* unitspecs.swift */; };
+		7DEBD0EE1F7EAEED00842E2A /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DEBD0EC1F7EAEED00842E2A /* Nimble.framework */; };
+		7DEBD0EF1F7EAEED00842E2A /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DEBD0ED1F7EAEED00842E2A /* Quick.framework */; };
+		7DEBD0F31F7EAF1E00842E2A /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7DEBD0F11F7EAF1E00842E2A /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		7DEBD0F41F7EAF1E00842E2A /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7DEBD0F21F7EAF1E00842E2A /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7DEBD0E61F7EAE2300842E2A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7DEBD08C1F6DDAD800842E2A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7DEBD0931F6DDAD800842E2A;
+			remoteInfo = wildlifers;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		7DEBD0B01F6E029000842E2A /* Embed Frameworks */ = {
@@ -43,6 +56,17 @@
 				7DEBD0AF1F6E029000842E2A /* Realm.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7DEBD0F01F7EAF0800842E2A /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				7DEBD0F31F7EAF1E00842E2A /* Nimble.framework in CopyFiles */,
+				7DEBD0F41F7EAF1E00842E2A /* Quick.framework in CopyFiles */,
+			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -60,17 +84,22 @@
 		7DEBD0B91F6EE00C00842E2A /* DataEntryCellType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataEntryCellType.swift; sourceTree = "<group>"; };
 		7DEBD0BB1F6F233D00842E2A /* DataEntryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataEntryTableViewController.swift; sourceTree = "<group>"; };
 		7DEBD0BD1F6F26D300842E2A /* DataEntryTablePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataEntryTablePresenter.swift; sourceTree = "<group>"; };
-		7DEBD0BF1F6F27F100842E2A /* BooleanSwitchEntryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BooleanSwitchEntryCell.swift; sourceTree = "<group>"; };
+		7DEBD0BF1F6F27F100842E2A /* SwitchEntryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwitchEntryCell.swift; sourceTree = "<group>"; };
 		7DEBD0C21F6F281000842E2A /* TextEntryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextEntryCell.swift; sourceTree = "<group>"; };
 		7DEBD0C41F6F282700842E2A /* LocationEntryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationEntryCell.swift; sourceTree = "<group>"; };
 		7DEBD0C61F6F284D00842E2A /* RadioButtonEntryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RadioButtonEntryCell.swift; sourceTree = "<group>"; };
 		7DEBD0C81F6F285600842E2A /* NumberEntryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumberEntryCell.swift; sourceTree = "<group>"; };
 		7DEBD0CA1F6F299200842E2A /* SubdatumSegueCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubdatumSegueCell.swift; sourceTree = "<group>"; };
 		7DEBD0D01F785B4700842E2A /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		7DEBD0D41F78709F00842E2A /* TextDisplayCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextDisplayCell.swift; sourceTree = "<group>"; };
-		7DEBD0D61F78761900842E2A /* DataViewBinding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataViewBinding.swift; sourceTree = "<group>"; };
 		7DEBD0D81F79D72E00842E2A /* CommonData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonData.swift; sourceTree = "<group>"; };
 		7DEBD0DA1F7AB91400842E2A /* AvailableModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AvailableModels.swift; sourceTree = "<group>"; };
+		7DEBD0E11F7EAE2200842E2A /* unitspecs.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = unitspecs.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7DEBD0E31F7EAE2300842E2A /* unitspecs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = unitspecs.swift; sourceTree = "<group>"; };
+		7DEBD0E51F7EAE2300842E2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7DEBD0EC1F7EAEED00842E2A /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
+		7DEBD0ED1F7EAEED00842E2A /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
+		7DEBD0F11F7EAF1E00842E2A /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
+		7DEBD0F21F7EAF1E00842E2A /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,16 +112,29 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		7DEBD0DE1F7EAE2200842E2A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7DEBD0EE1F7EAEED00842E2A /* Nimble.framework in Frameworks */,
+				7DEBD0EF1F7EAEED00842E2A /* Quick.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		7DEBD08B1F6DDAD800842E2A = {
 			isa = PBXGroup;
 			children = (
+				7DEBD0F11F7EAF1E00842E2A /* Nimble.framework */,
+				7DEBD0F21F7EAF1E00842E2A /* Quick.framework */,
 				7DEBD0B11F6E029A00842E2A /* RealmSwift.framework */,
 				7DEBD0AD1F6E029000842E2A /* Realm.framework */,
 				7DEBD0961F6DDAD800842E2A /* wildlifers */,
+				7DEBD0E21F7EAE2300842E2A /* unitspecs */,
 				7DEBD0951F6DDAD800842E2A /* Products */,
+				7DEBD0EB1F7EAEED00842E2A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -100,6 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				7DEBD0941F6DDAD800842E2A /* wildlifers.app */,
+				7DEBD0E11F7EAE2200842E2A /* unitspecs.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -116,7 +159,6 @@
 				7DEBD0A01F6DDAD800842E2A /* LaunchScreen.storyboard */,
 				7DEBD0A31F6DDAD800842E2A /* Info.plist */,
 				7DEBD0D01F785B4700842E2A /* Main.storyboard */,
-				7DEBD0D61F78761900842E2A /* DataViewBinding.swift */,
 			);
 			path = wildlifers;
 			sourceTree = "<group>";
@@ -135,13 +177,12 @@
 		7DEBD0C11F6F27F700842E2A /* dataentrycells */ = {
 			isa = PBXGroup;
 			children = (
-				7DEBD0BF1F6F27F100842E2A /* BooleanSwitchEntryCell.swift */,
+				7DEBD0BF1F6F27F100842E2A /* SwitchEntryCell.swift */,
 				7DEBD0C21F6F281000842E2A /* TextEntryCell.swift */,
 				7DEBD0C41F6F282700842E2A /* LocationEntryCell.swift */,
 				7DEBD0C61F6F284D00842E2A /* RadioButtonEntryCell.swift */,
 				7DEBD0C81F6F285600842E2A /* NumberEntryCell.swift */,
 				7DEBD0CA1F6F299200842E2A /* SubdatumSegueCell.swift */,
-				7DEBD0D41F78709F00842E2A /* TextDisplayCell.swift */,
 			);
 			name = dataentrycells;
 			sourceTree = "<group>";
@@ -161,6 +202,24 @@
 				7DEBD0BD1F6F26D300842E2A /* DataEntryTablePresenter.swift */,
 			);
 			name = presenters;
+			sourceTree = "<group>";
+		};
+		7DEBD0E21F7EAE2300842E2A /* unitspecs */ = {
+			isa = PBXGroup;
+			children = (
+				7DEBD0E31F7EAE2300842E2A /* unitspecs.swift */,
+				7DEBD0E51F7EAE2300842E2A /* Info.plist */,
+			);
+			path = unitspecs;
+			sourceTree = "<group>";
+		};
+		7DEBD0EB1F7EAEED00842E2A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7DEBD0EC1F7EAEED00842E2A /* Nimble.framework */,
+				7DEBD0ED1F7EAEED00842E2A /* Quick.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -184,6 +243,25 @@
 			productReference = 7DEBD0941F6DDAD800842E2A /* wildlifers.app */;
 			productType = "com.apple.product-type.application";
 		};
+		7DEBD0E01F7EAE2200842E2A /* unitspecs */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7DEBD0E81F7EAE2300842E2A /* Build configuration list for PBXNativeTarget "unitspecs" */;
+			buildPhases = (
+				7DEBD0DD1F7EAE2200842E2A /* Sources */,
+				7DEBD0DE1F7EAE2200842E2A /* Frameworks */,
+				7DEBD0DF1F7EAE2200842E2A /* Resources */,
+				7DEBD0F01F7EAF0800842E2A /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7DEBD0E71F7EAE2300842E2A /* PBXTargetDependency */,
+			);
+			name = unitspecs;
+			productName = unitspecs;
+			productReference = 7DEBD0E11F7EAE2200842E2A /* unitspecs.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -197,6 +275,11 @@
 					7DEBD0931F6DDAD800842E2A = {
 						CreatedOnToolsVersion = 8.2.1;
 						ProvisioningStyle = Automatic;
+					};
+					7DEBD0E01F7EAE2200842E2A = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 7DEBD0931F6DDAD800842E2A;
 					};
 				};
 			};
@@ -214,6 +297,7 @@
 			projectRoot = "";
 			targets = (
 				7DEBD0931F6DDAD800842E2A /* wildlifers */,
+				7DEBD0E01F7EAE2200842E2A /* unitspecs */,
 			);
 		};
 /* End PBXProject section */
@@ -229,6 +313,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		7DEBD0DF1F7EAE2200842E2A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -239,13 +330,11 @@
 				7DEBD0C91F6F285600842E2A /* NumberEntryCell.swift in Sources */,
 				7DEBD0BA1F6EE00C00842E2A /* DataEntryCellType.swift in Sources */,
 				7DEBD0BC1F6F233D00842E2A /* DataEntryTableViewController.swift in Sources */,
-				7DEBD0C01F6F27F100842E2A /* BooleanSwitchEntryCell.swift in Sources */,
+				7DEBD0C01F6F27F100842E2A /* SwitchEntryCell.swift in Sources */,
 				7DEBD0C31F6F281000842E2A /* TextEntryCell.swift in Sources */,
 				7DEBD0DB1F7AB91400842E2A /* AvailableModels.swift in Sources */,
 				7DEBD0D91F79D72E00842E2A /* CommonData.swift in Sources */,
 				7DEBD0BE1F6F26D300842E2A /* DataEntryTablePresenter.swift in Sources */,
-				7DEBD0D71F78761900842E2A /* DataViewBinding.swift in Sources */,
-				7DEBD0D51F78709F00842E2A /* TextDisplayCell.swift in Sources */,
 				7DEBD0981F6DDAD800842E2A /* AppDelegate.swift in Sources */,
 				7DEBD0B51F6E031C00842E2A /* RaptorNestActivity.swift in Sources */,
 				7DEBD0CB1F6F299200842E2A /* SubdatumSegueCell.swift in Sources */,
@@ -255,7 +344,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		7DEBD0DD1F7EAE2200842E2A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7DEBD0E41F7EAE2300842E2A /* unitspecs.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7DEBD0E71F7EAE2300842E2A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7DEBD0931F6DDAD800842E2A /* wildlifers */;
+			targetProxy = 7DEBD0E61F7EAE2300842E2A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		7DEBD0A01F6DDAD800842E2A /* LaunchScreen.storyboard */ = {
@@ -394,6 +499,40 @@
 			};
 			name = Release;
 		};
+		7DEBD0E91F7EAE2300842E2A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = unitspecs/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = sh.unitspecs;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/wildlifers.app/wildlifers";
+			};
+			name = Debug;
+		};
+		7DEBD0EA1F7EAE2300842E2A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = unitspecs/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = sh.unitspecs;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/wildlifers.app/wildlifers";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -411,6 +550,14 @@
 			buildConfigurations = (
 				7DEBD0A71F6DDAD800842E2A /* Debug */,
 				7DEBD0A81F6DDAD800842E2A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		7DEBD0E81F7EAE2300842E2A /* Build configuration list for PBXNativeTarget "unitspecs" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7DEBD0E91F7EAE2300842E2A /* Debug */,
+				7DEBD0EA1F7EAE2300842E2A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};

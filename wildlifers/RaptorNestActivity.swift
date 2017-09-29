@@ -2,44 +2,34 @@ import Foundation
 import RealmSwift
 import Realm
 
-enum Precipitation: String {
-    case None, Light, Moderate, Heavy
+struct DisturbanceLevel: RadioButton {
+    var options = ["None", "Low", "Moderate", "High", "Unrecorded"]
+    var selectedOption = -1
 }
 
-enum PrecipitationType: String {
-    case Rain, Snow, Other
+struct DisturbanceSource: RadioButton {
+    var options = ["NotAvailable", "Human", "Wildlife", "DomesticAnimals", "MotorizedVehicle", "NonmotorizedVehicle", "Other"]
+    var selectedOption = -1
 }
 
-enum Wind: String {
-    case Calm, Light, Moderate, Strong
+struct NestMonitoringLevel: RadioButton {
+    var options = ["NewNestFirstVisit", "HistoricNestFirstVisit", "MonitoringVisit", "FinalVisit", "None"]
+    var selectedOption = -1
 }
 
-enum CloudCover: String {
-    case None, PartlyCloudy, MediumCloudy, Overcast
+struct NestLocationStatus: RadioButton {
+    var options = ["New", "NewAlternateSite", "ImprovedLocation", "Known"]
+    var selectedOption = -1
 }
 
-enum DisturbanceLevel: String {
-    case None, Low, Moderate, High, Unrecorded
+struct NestSubstrate: RadioButton {
+    var options = ["Cliff", "RockOrEarthPinnacle", "RockOutcrop", "Ground", "ManMadeStructure", "Shrub", "Tree"]
+    var selectedOption = -1
 }
 
-enum DisturbanceSource: String {
-    case NotAvailable, Human, Wildlife, DomesticAnimals, MotorizedVehicle, NonmotorizedVehicle, Other
-}
-
-enum NestMonitoringLevel: String {
-    case NewNestFirstVisit, HistoricNestFirstVisit, MonitoringVisit, FinalVisit, None
-}
-
-enum NestLocationStatus: String {
-    case New, NewAlternateSite, ImprovedLocation, Known
-}
-
-enum NestSubstrate: String {
-    case Cliff, RockOrEarthPinnacle, RockOutcrop, Ground, ManMadeStructure, Shrub, Tree
-}
-
-enum NestStatus: String {
-    case Undetermined, OccupiedIntact, OccupiedFailed, UnoccupiedIntact, UnoccupiedDilapidated, Destroyed
+struct NestStatus: RadioButton {
+    var options = ["Undetermined", "OccupiedIntact", "OccupiedFailed", "UnoccupiedIntact", "UnoccupiedDilapidated", "Destroyed"]
+    var selectedOption = -1
 }
 
 class RaptorObservation : Object, DataEntryViewModel {
@@ -51,14 +41,14 @@ class RaptorObservation : Object, DataEntryViewModel {
         return [
             (dataType:.Text, cellConfiguration:
                 TextConfiguration(
-                    descriptionText:"\(#keyPath(RaptorObservation.observations))",
+                    descriptionText:"\(#keyPath(RaptorObservation.observations))".camelCaseToWords(),
                     hintText:"",
                     enteredText:""
                 )
             ),
             (dataType:.Text, cellConfiguration:
                 TextConfiguration(
-                    descriptionText:"\(#keyPath(RaptorObservation.behaviors))",
+                    descriptionText:"\(#keyPath(RaptorObservation.behaviors))".camelCaseToWords(),
                     hintText:"",
                     enteredText:""
                 )
@@ -71,70 +61,61 @@ class RaptorNestActivity : Object, DataEntryViewModel {
     // classifications
     dynamic var siteName:String = ""
     dynamic var species:String = ""
-    dynamic var observationPoint:Location = Location()
+    dynamic var observationPoint:Location?
     
-    private dynamic var monitoringLevelRaw:String = NestMonitoringLevel.None.rawValue
-    var monitoringLevel:NestMonitoringLevel {
-        get { return NestMonitoringLevel(rawValue: monitoringLevelRaw)! }
-        set { monitoringLevelRaw = newValue.rawValue }
+    private dynamic var monitoringLevelRaw:String {
+        get { return monitoringLevel.selectedOption >= 0 ? monitoringLevel.options[monitoringLevel.selectedOption] : "" }
     }
+    var monitoringLevel:NestMonitoringLevel = NestMonitoringLevel()
     
     // weather
     dynamic var temperatureInF:Int = 0
     
-    private dynamic var precipitationRaw:String = Precipitation.None.rawValue
-    var precipitation:Precipitation {
-        get { return Precipitation(rawValue: precipitationRaw)! }
-        set { precipitationRaw = newValue.rawValue }
+    private dynamic var precipitationRaw:String {
+        get { return precipitation.selectedOption >= 0 ? precipitation.options[precipitation.selectedOption] : "" }
     }
-    private dynamic var precipitationTypeRaw:String = PrecipitationType.Other.rawValue
-    var precipitationType:PrecipitationType {
-        get { return PrecipitationType(rawValue: precipitationTypeRaw)! }
-        set { precipitationTypeRaw = newValue.rawValue }
+    var precipitation:Precipitation = Precipitation()
+    private dynamic var precipitationTypeRaw:String {
+        get { return precipitationType.selectedOption >= 0 ? precipitationType.options[precipitationType.selectedOption] : ""  }
     }
-    dynamic var travelTimeToSite:TimeInterval = 0
+    var precipitationType:PrecipitationType = PrecipitationType()
+    dynamic var travelTimeToSite:String = ""
     
     // disturbances
     dynamic var existingThreats:Bool = false
-    private dynamic var disturbanceLevelRaw:String = DisturbanceLevel.None.rawValue
-    var disturbanceLevel:DisturbanceLevel {
-        get { return DisturbanceLevel(rawValue: disturbanceLevelRaw)! }
-        set { disturbanceLevelRaw = newValue.rawValue }
+    private dynamic var disturbanceLevelRaw:String {
+        get { return disturbanceLevel.selectedOption >= 0 ? disturbanceLevel.options[disturbanceLevel.selectedOption] : "" }
     }
-    private dynamic var disturbanceSourceRaw:String = DisturbanceSource.NotAvailable.rawValue
-    var disturbanceSource:DisturbanceSource {
-        get { return DisturbanceSource(rawValue: disturbanceSourceRaw)! }
-        set { disturbanceSourceRaw = newValue.rawValue }
+    var disturbanceLevel:DisturbanceLevel = DisturbanceLevel()
+    private dynamic var disturbanceSourceRaw:String {
+        get { return disturbanceSource.selectedOption >= 0 ? disturbanceSource.options[disturbanceSource.selectedOption] : "" }
     }
-    dynamic var disturbanceDescription:String?
+    var disturbanceSource:DisturbanceSource = DisturbanceSource()
+    dynamic var disturbanceDescription:String = ""
 
     // nest location
-    private dynamic var nestLocationStatusRaw:String = NestLocationStatus.New.rawValue
-    var nestLocationStatus:NestLocationStatus {
-        get { return NestLocationStatus(rawValue: nestLocationStatusRaw)! }
-        set { nestLocationStatusRaw = newValue.rawValue }
+    private dynamic var nestLocationStatusRaw:String {
+        get { return nestLocationStatus.selectedOption >= 0 ? nestLocationStatus.options[nestLocationStatus.selectedOption] : "" }
     }
+    var nestLocationStatus:NestLocationStatus = NestLocationStatus()
     dynamic var county:String = ""
     dynamic var publicLand:Bool = false
     dynamic var landOwner:String = ""
-    dynamic var nestLocation:Location = Location()
-    private dynamic var nestSubstrateRaw:String = NestSubstrate.Cliff.rawValue
-    var nestSubstrate:NestSubstrate {
-        get { return NestSubstrate(rawValue: nestSubstrateRaw)! }
-        set { nestSubstrateRaw = newValue.rawValue }
+    dynamic var nestLocation:Location?
+    private dynamic var nestSubstrateRaw:String {
+        get { return nestSubstrate.selectedOption >= 0 ? nestSubstrate.options[nestSubstrate.selectedOption] : "" }
     }
+    var nestSubstrate:NestSubstrate = NestSubstrate()
     dynamic var nestPlantAlive:Bool = false
     dynamic var nestPlantSpecies:String = ""
-    private dynamic var nestStatusRaw:String = NestStatus.Undetermined.rawValue
-    var nestStatus:NestStatus {
-        get { return NestStatus(rawValue: nestStatusRaw)! }
-        set { nestStatusRaw = newValue.rawValue }
+    private dynamic var nestStatusRaw:String {
+        get { return nestStatus.selectedOption >= 0 ? nestStatus.options[nestStatus.selectedOption] : "" }
     }
-    private dynamic var nestAspectRaw:String = Aspect.N.rawValue
-    var nestAspect:Aspect {
-        get { return Aspect(rawValue: nestAspectRaw)! }
-        set { nestAspectRaw = newValue.rawValue }
+    var nestStatus:NestStatus = NestStatus()
+    private dynamic var nestAspectRaw:String {
+        get { return nestAspect.selectedOption >= 0 ? nestAspect.options[nestAspect.selectedOption] : "" }
     }
+    var nestAspect:Aspect = Aspect()
     dynamic var active:Bool = false
     
     // birds
@@ -144,35 +125,14 @@ class RaptorNestActivity : Object, DataEntryViewModel {
     dynamic var fledglingCount:Int = 0
     
     dynamic var youngSize:String = ""
-    final var plumageHint = "downy, half downy & half contour feathers, mostly contour feathers with down on nape"
-    dynamic var youngPlumage:String = ""
+    private dynamic var youngPlumage:String {
+        get { return plumageHint.string }
+    }
+    final var plumageHint:HintString = HintString(
+        string:"",
+        hint:"downy, half downy & half contour feathers, mostly contour feathers with down on nape")
     
     // observations
     final var significantBehaviors = "N/A, calling, copulation, courting, defending territory, disturbed/flushed, eating, feeding young, flying, hunting, incubating, nesting activity (building/cleaning/sitting), perched outside next, preening, no raptor present, other\n FOR YOUNG SPECIFICALLY: being fed by adult, flapping wings, hopping, lying flat, short flights, sibling rivalry, sitting in nest, sitting on edge of nest"
     let observations:List<RaptorObservation> = List<RaptorObservation>()
-    
-    func getDataEntryCellTypes() -> [(dataType: DataEntryCellType, cellConfiguration: CellConfiguration)] {
-        return [
-            (dataType: .Text,
-             cellConfiguration: TextConfiguration(
-                descriptionText:"\(#keyPath(RaptorNestActivity.siteName))",
-                hintText:"",
-                enteredText:""
-                )
-            ),
-            (dataType: .Text,
-             cellConfiguration: TextConfiguration(
-                descriptionText:"\(#keyPath(RaptorNestActivity.species))",
-                hintText:"",
-                enteredText:""
-                )
-            ),
-            (dataType: .Location,
-             cellConfiguration: LocationConfiguration(
-                descriptionText:"\(#keyPath(RaptorNestActivity.observationPoint))"
-                )
-            ),
-            
-        ]
-    }
 }

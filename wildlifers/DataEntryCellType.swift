@@ -1,12 +1,73 @@
 import Foundation
 
 protocol DataEntryViewModel {
-    func getDataEntryCellTypes() -> [(dataType: DataEntryCellType, cellConfiguration: CellConfiguration)]
+    var dataEntryCellConfigurations:[(dataType: DataEntryCellType, cellConfiguration: CellConfiguration)] { get }
 }
 
 extension DataEntryViewModel {
-    func getDataEntryCellTypes() -> [(dataType: DataEntryCellType, cellConfiguration: CellConfiguration)] {
-        fatalError("cell entry types not defined for this model!")
+    var dataEntryCellConfigurations:[(dataType: DataEntryCellType, cellConfiguration: CellConfiguration)] {
+        get {
+            var cellConfigurations = [(DataEntryCellType, CellConfiguration)]()
+            let mirror = Mirror(reflecting: self)
+            
+            for (name, value) in mirror.children {
+                guard let name = name else { continue }
+                let type = type(of: value) as AnyObject
+                
+                switch type {
+                case is String:
+                    cellConfigurations.append((
+                        dataType: .Text,
+                        cellConfiguration: TextConfiguration(
+                            descriptionText:name.camelCaseToWords(),
+                            hintText:"",
+                            enteredText:value as! String
+                        )
+                    ))
+                    break
+                case is Bool:
+                    cellConfigurations.append((
+                        dataType: .Switch,
+                        cellConfiguration: SwitchConfiguration(
+                            descriptionText:name.camelCaseToWords(),
+                            selected:value as! Bool
+                        )
+                    ))
+                    break
+                case is RadioButton:
+                    cellConfigurations.append((
+                        dataType: .RadioButton,
+                        cellConfiguration: RadioButtonConfiguration(
+                            descriptionText:name.camelCaseToWords(),
+                            selectedOption:(value as! RadioButton).selectedOption,
+                            options:(value as! RadioButton).options
+                        )
+                    ))
+                    break
+                case is Location:
+                    cellConfigurations.append((
+                        dataType: .Location,
+                        cellConfiguration: LocationConfiguration(
+                            descriptionText:name.camelCaseToWords(),
+                            location:value as! Location
+                        )
+                    ))
+                    break
+                case is Int:
+                    cellConfigurations.append((
+                        dataType: .Number,
+                        cellConfiguration: NumberConfiguration(
+                            descriptionText:name.camelCaseToWords(),
+                            number:value as! Float
+                        )
+                    ))
+                    break
+                default: break
+                }
+            }
+            return cellConfigurations
+        
+        }
     }
 }
 
@@ -14,8 +75,8 @@ protocol CellConfiguration {
     var descriptionText:String { get set }
 }
 
-enum DataEntryCellType {
-    case Switch, Text, RadioButtons, Number, Location, SubDatumSegue, TextDisplay
+enum DataEntryCellType:String {
+    case Switch, Text, RadioButton, Number, Location, SubDatumSegue, SuperDatumSegue
 }
 
 struct SwitchConfiguration: CellConfiguration {
@@ -36,23 +97,12 @@ struct TextConfiguration: CellConfiguration {
 
 struct RadioButtonConfiguration: CellConfiguration {
     var descriptionText: String = ""
+    var selectedOption:Int
+    var options:[String]
 }
 
 struct NumberConfiguration: CellConfiguration {
     var descriptionText: String = ""
     var number:Float
-}
-
-
-func toString(cellType:DataEntryCellType) -> String {
-    switch cellType {
-    case .Switch: return "switch"
-    case .Location: return "location"
-    case .Number: return "number"
-    case .RadioButtons: return "radiobuttons"
-    case .Text: return "text"
-    case .SubDatumSegue: return "subdatumsegue"
-    case .TextDisplay: return "textdisplay"
-    }
 }
 

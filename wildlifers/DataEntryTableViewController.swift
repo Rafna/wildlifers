@@ -3,27 +3,25 @@ import RealmSwift
 
 protocol DataEntryTableViewCell {
     var type:DataEntryCellType { get }
+    func configure(configuration:CellConfiguration)
+}
+
+extension DataEntryTableViewCell {
+    func configure(configuration:CellConfiguration) {
+        fatalError("wrong type of configuration passed to cell!")
+    }
 }
 
 class DataEntryTableViewController : UITableViewController {
     
     let presenter = DataEntryTablePresenter()
-    var dataTypes:[DataEntryCellType] = []
+    var dataTypes:[(dataType:DataEntryCellType, cellConfiguration:CellConfiguration)] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.dataTypes = [.Switch]
-        let realm = try! Realm()
-        let schema = realm.schema["RaptorNestActivity"]
         
-        for property in schema!.properties {
-            switch property.type {
-            case .bool: print("bool")
-            case .string: print("string")
-            case .object: print("object")
-            default: print("other")
-            }
-        }
+        let activity = RaptorNestActivity()
+        dataTypes = activity.dataEntryCellConfigurations
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -35,19 +33,11 @@ class DataEntryTableViewController : UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let dataEntryType = dataTypes[indexPath.row]
-        let cell = tableView.dequeueReusableCell(withIdentifier: toString(cellType: dataEntryType))
+        let cellConfiguration = dataTypes[indexPath.row].cellConfiguration
+        let dataEntryType = dataTypes[indexPath.row].dataType
+        let cell = tableView.dequeueReusableCell(withIdentifier: dataEntryType.rawValue)
         
-        switch dataEntryType {
-        case .Switch:
-            (cell as! BooleanSwitchEntryCell).bindData(selected: false)
-        case .Location: break
-        case .Number: break
-        case .RadioButtons: break
-        case .Text: break
-        case .SubDatumSegue: break
-        case .TextDisplay: break
-        }
+        (cell as! DataEntryTableViewCell).configure(configuration: cellConfiguration)
         
         return cell!
     }
