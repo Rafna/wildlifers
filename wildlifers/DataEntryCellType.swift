@@ -12,10 +12,10 @@ extension DataEntryViewModel {
             
             for (name, value) in mirror.children {
                 guard let name = name else { continue }
-                let type = type(of: value) as AnyObject
+                let type = type(of: value)
                 
                 switch type {
-                case is String:
+                case is String.Type:
                     cellConfigurations.append((
                         dataType: .Text,
                         cellConfiguration: TextConfiguration(
@@ -25,7 +25,7 @@ extension DataEntryViewModel {
                         )
                     ))
                     break
-                case is Bool:
+                case is Bool.Type:
                     cellConfigurations.append((
                         dataType: .Switch,
                         cellConfiguration: SwitchConfiguration(
@@ -34,7 +34,7 @@ extension DataEntryViewModel {
                         )
                     ))
                     break
-                case is RadioButton:
+                case is RadioButton.Type:
                     cellConfigurations.append((
                         dataType: .RadioButton,
                         cellConfiguration: RadioButtonConfiguration(
@@ -44,7 +44,7 @@ extension DataEntryViewModel {
                         )
                     ))
                     break
-                case is Location:
+                case is Location.Type:
                     cellConfigurations.append((
                         dataType: .Location,
                         cellConfiguration: LocationConfiguration(
@@ -53,12 +53,12 @@ extension DataEntryViewModel {
                         )
                     ))
                     break
-                case is Int:
+                case is Int.Type:
                     cellConfigurations.append((
                         dataType: .Number,
                         cellConfiguration: NumberConfiguration(
                             descriptionText:name.camelCaseToWords(),
-                            number:value as! Float
+                            number:Float(value as! Int)
                         )
                     ))
                     break

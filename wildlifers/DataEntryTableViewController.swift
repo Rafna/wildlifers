@@ -6,12 +6,6 @@ protocol DataEntryTableViewCell {
     func configure(configuration:CellConfiguration)
 }
 
-extension DataEntryTableViewCell {
-    func configure(configuration:CellConfiguration) {
-        fatalError("wrong type of configuration passed to cell!")
-    }
-}
-
 class DataEntryTableViewController : UITableViewController {
     
     let presenter = DataEntryTablePresenter()
@@ -35,6 +29,7 @@ class DataEntryTableViewController : UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cellConfiguration = dataTypes[indexPath.row].cellConfiguration
         let dataEntryType = dataTypes[indexPath.row].dataType
+        print(dataEntryType.rawValue)
         let cell = tableView.dequeueReusableCell(withIdentifier: dataEntryType.rawValue)
         
         (cell as! DataEntryTableViewCell).configure(configuration: cellConfiguration)

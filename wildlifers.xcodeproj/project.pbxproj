@@ -28,11 +28,15 @@
 		7DEBD0D11F785B4700842E2A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DEBD0D01F785B4700842E2A /* Main.storyboard */; };
 		7DEBD0D91F79D72E00842E2A /* CommonData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DEBD0D81F79D72E00842E2A /* CommonData.swift */; };
 		7DEBD0DB1F7AB91400842E2A /* AvailableModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DEBD0DA1F7AB91400842E2A /* AvailableModels.swift */; };
-		7DEBD0E41F7EAE2300842E2A /* unitspecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DEBD0E31F7EAE2300842E2A /* unitspecs.swift */; };
 		7DEBD0EE1F7EAEED00842E2A /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DEBD0EC1F7EAEED00842E2A /* Nimble.framework */; };
 		7DEBD0EF1F7EAEED00842E2A /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DEBD0ED1F7EAEED00842E2A /* Quick.framework */; };
 		7DEBD0F31F7EAF1E00842E2A /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7DEBD0F11F7EAF1E00842E2A /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7DEBD0F41F7EAF1E00842E2A /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7DEBD0F21F7EAF1E00842E2A /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		7DEBD0F61F7EB59900842E2A /* DataEntryCellTypeSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DEBD0F51F7EB59900842E2A /* DataEntryCellTypeSpec.swift */; };
+		7DEBD0F81F7EBB9B00842E2A /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DEBD0B11F6E029A00842E2A /* RealmSwift.framework */; };
+		7DEBD0F91F7EBB9D00842E2A /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DEBD0AD1F6E029000842E2A /* Realm.framework */; };
+		7DEBD0FC1F7ED29500842E2A /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DEBD0FB1F7ED29400842E2A /* StringExtensions.swift */; };
+		7DEBD0FE1F7EE7AF00842E2A /* DLRadioButton.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DEBD0FD1F7EE7AF00842E2A /* DLRadioButton.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,12 +98,14 @@
 		7DEBD0D81F79D72E00842E2A /* CommonData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonData.swift; sourceTree = "<group>"; };
 		7DEBD0DA1F7AB91400842E2A /* AvailableModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AvailableModels.swift; sourceTree = "<group>"; };
 		7DEBD0E11F7EAE2200842E2A /* unitspecs.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = unitspecs.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		7DEBD0E31F7EAE2300842E2A /* unitspecs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = unitspecs.swift; sourceTree = "<group>"; };
 		7DEBD0E51F7EAE2300842E2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7DEBD0EC1F7EAEED00842E2A /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		7DEBD0ED1F7EAEED00842E2A /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 		7DEBD0F11F7EAF1E00842E2A /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		7DEBD0F21F7EAF1E00842E2A /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
+		7DEBD0F51F7EB59900842E2A /* DataEntryCellTypeSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataEntryCellTypeSpec.swift; sourceTree = "<group>"; };
+		7DEBD0FB1F7ED29400842E2A /* StringExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
+		7DEBD0FD1F7EE7AF00842E2A /* DLRadioButton.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DLRadioButton.framework; path = Carthage/Build/iOS/DLRadioButton.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +124,9 @@
 			files = (
 				7DEBD0EE1F7EAEED00842E2A /* Nimble.framework in Frameworks */,
 				7DEBD0EF1F7EAEED00842E2A /* Quick.framework in Frameworks */,
+				7DEBD0F81F7EBB9B00842E2A /* RealmSwift.framework in Frameworks */,
+				7DEBD0F91F7EBB9D00842E2A /* Realm.framework in Frameworks */,
+				7DEBD0FE1F7EE7AF00842E2A /* DLRadioButton.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -150,6 +159,7 @@
 		7DEBD0961F6DDAD800842E2A /* wildlifers */ = {
 			isa = PBXGroup;
 			children = (
+				7DEBD0FA1F7ED27600842E2A /* helpers & extensions */,
 				7DEBD0D31F785D3B00842E2A /* presenters */,
 				7DEBD0D21F785D2800842E2A /* viewcontrollers */,
 				7DEBD0C11F6F27F700842E2A /* dataentrycells */,
@@ -207,7 +217,7 @@
 		7DEBD0E21F7EAE2300842E2A /* unitspecs */ = {
 			isa = PBXGroup;
 			children = (
-				7DEBD0E31F7EAE2300842E2A /* unitspecs.swift */,
+				7DEBD0F71F7EB72F00842E2A /* models */,
 				7DEBD0E51F7EAE2300842E2A /* Info.plist */,
 			);
 			path = unitspecs;
@@ -216,10 +226,27 @@
 		7DEBD0EB1F7EAEED00842E2A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7DEBD0FD1F7EE7AF00842E2A /* DLRadioButton.framework */,
 				7DEBD0EC1F7EAEED00842E2A /* Nimble.framework */,
 				7DEBD0ED1F7EAEED00842E2A /* Quick.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7DEBD0F71F7EB72F00842E2A /* models */ = {
+			isa = PBXGroup;
+			children = (
+				7DEBD0F51F7EB59900842E2A /* DataEntryCellTypeSpec.swift */,
+			);
+			name = models;
+			sourceTree = "<group>";
+		};
+		7DEBD0FA1F7ED27600842E2A /* helpers & extensions */ = {
+			isa = PBXGroup;
+			children = (
+				7DEBD0FB1F7ED29400842E2A /* StringExtensions.swift */,
+			);
+			name = "helpers & extensions";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -339,6 +366,7 @@
 				7DEBD0B51F6E031C00842E2A /* RaptorNestActivity.swift in Sources */,
 				7DEBD0CB1F6F299200842E2A /* SubdatumSegueCell.swift in Sources */,
 				7DEBD0C51F6F282700842E2A /* LocationEntryCell.swift in Sources */,
+				7DEBD0FC1F7ED29500842E2A /* StringExtensions.swift in Sources */,
 				7DEBD0AA1F6DE2A800842E2A /* InitialViewController.swift in Sources */,
 				7DEBD0C71F6F284D00842E2A /* RadioButtonEntryCell.swift in Sources */,
 			);
@@ -348,7 +376,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7DEBD0E41F7EAE2300842E2A /* unitspecs.swift in Sources */,
+				7DEBD0F61F7EB59900842E2A /* DataEntryCellTypeSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -503,9 +531,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEFINES_MODULE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = unitspecs/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -520,9 +550,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEFINES_MODULE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = unitspecs/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";

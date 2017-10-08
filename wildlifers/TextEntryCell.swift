@@ -2,10 +2,12 @@ import UIKit
 
 class TextEntryCell : UITableViewCell, DataEntryTableViewCell {
     var type = DataEntryCellType.Text
-    @IBOutlet weak var textField: UITextField!
+    @IBOutlet weak var textView: UITextView!
+    @IBOutlet weak var descriptionLabel: UILabel!
     
-    func configure(configuration: TextConfiguration) {
-        self.textLabel?.text = configuration.descriptionText
-        self.textField.placeholder = configuration.hintText
+    func configure(configuration: CellConfiguration) {
+        guard let configuration = configuration as? TextConfiguration else { fatalError("bad configuration!!") }
+        self.descriptionLabel.text = configuration.descriptionText
+        self.textView.text = configuration.hintText
     }
 }
