@@ -6,7 +6,7 @@ protocol DataEntryTableViewCell {
     func configure(configuration:CellConfiguration)
 }
 
-class DataEntryTableViewController : UITableViewController {
+class DataEntryTableViewController : UITableViewController, UICollectionViewDataSource {
     
     let presenter = DataEntryTablePresenter()
     var dataTypes:[(dataType:DataEntryCellType, cellConfiguration:CellConfiguration)] = []
@@ -29,12 +29,43 @@ class DataEntryTableViewController : UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cellConfiguration = dataTypes[indexPath.row].cellConfiguration
         let dataEntryType = dataTypes[indexPath.row].dataType
-        print(dataEntryType.rawValue)
         let cell = tableView.dequeueReusableCell(withIdentifier: dataEntryType.rawValue)
         
-        (cell as! DataEntryTableViewCell).configure(configuration: cellConfiguration)
+        switch dataEntryType {
+        case .RadioButton:
+            let cell = cell as! RadioButtonEntryCell
+            cell.collectionView.dataSource = self
+            cell.collectionView.tag = indexPath.row
+            cell.configure(configuration: cellConfiguration)
+        default:
+            (cell as! DataEntryTableViewCell).configure(configuration: cellConfiguration)
+        }
         
         return cell!
     }
     
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        let cellConfiguration = dataTypes[collectionView.tag].cellConfiguration as! RadioButtonConfiguration
+        
+        return cellConfiguration.options.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let parentTableViewCellConfiguration = dataTypes[collectionView.tag].cellConfiguration as! RadioButtonConfiguration
+        let cellTitle = parentTableViewCellConfiguration.options[indexPath.row]
+        let selected = parentTableViewCellConfiguration.selectedOption == indexPath.row
+        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "rbutton", for: indexPath) as! CollectionViewRadioButton
+        
+        cell.isSelected = selected
+        
+        cell.descriptionLabel.text = cellTitle
+        cell.descriptionLabel.sizeToFit()
+        
+        return cell
+    }
 }

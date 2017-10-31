@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7D7B82B31F9D00F5001DD42B /* CollectionViewRadioButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D7B82B21F9D00F5001DD42B /* CollectionViewRadioButton.swift */; };
 		7DEBD0981F6DDAD800842E2A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DEBD0971F6DDAD800842E2A /* AppDelegate.swift */; };
 		7DEBD09F1F6DDAD800842E2A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7DEBD09E1F6DDAD800842E2A /* Assets.xcassets */; };
 		7DEBD0A21F6DDAD800842E2A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DEBD0A01F6DDAD800842E2A /* LaunchScreen.storyboard */; };
@@ -36,7 +37,6 @@
 		7DEBD0F81F7EBB9B00842E2A /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DEBD0B11F6E029A00842E2A /* RealmSwift.framework */; };
 		7DEBD0F91F7EBB9D00842E2A /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DEBD0AD1F6E029000842E2A /* Realm.framework */; };
 		7DEBD0FC1F7ED29500842E2A /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DEBD0FB1F7ED29400842E2A /* StringExtensions.swift */; };
-		7DEBD0FE1F7EE7AF00842E2A /* DLRadioButton.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DEBD0FD1F7EE7AF00842E2A /* DLRadioButton.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +76,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		7D7B82B21F9D00F5001DD42B /* CollectionViewRadioButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewRadioButton.swift; sourceTree = "<group>"; };
 		7DEBD0941F6DDAD800842E2A /* wildlifers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = wildlifers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DEBD0971F6DDAD800842E2A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7DEBD09E1F6DDAD800842E2A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -105,7 +106,6 @@
 		7DEBD0F21F7EAF1E00842E2A /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 		7DEBD0F51F7EB59900842E2A /* DataEntryCellTypeSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataEntryCellTypeSpec.swift; sourceTree = "<group>"; };
 		7DEBD0FB1F7ED29400842E2A /* StringExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
-		7DEBD0FD1F7EE7AF00842E2A /* DLRadioButton.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DLRadioButton.framework; path = Carthage/Build/iOS/DLRadioButton.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,7 +126,6 @@
 				7DEBD0EF1F7EAEED00842E2A /* Quick.framework in Frameworks */,
 				7DEBD0F81F7EBB9B00842E2A /* RealmSwift.framework in Frameworks */,
 				7DEBD0F91F7EBB9D00842E2A /* Realm.framework in Frameworks */,
-				7DEBD0FE1F7EE7AF00842E2A /* DLRadioButton.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -193,6 +192,7 @@
 				7DEBD0C61F6F284D00842E2A /* RadioButtonEntryCell.swift */,
 				7DEBD0C81F6F285600842E2A /* NumberEntryCell.swift */,
 				7DEBD0CA1F6F299200842E2A /* SubdatumSegueCell.swift */,
+				7D7B82B21F9D00F5001DD42B /* CollectionViewRadioButton.swift */,
 			);
 			name = dataentrycells;
 			sourceTree = "<group>";
@@ -226,7 +226,6 @@
 		7DEBD0EB1F7EAEED00842E2A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				7DEBD0FD1F7EE7AF00842E2A /* DLRadioButton.framework */,
 				7DEBD0EC1F7EAEED00842E2A /* Nimble.framework */,
 				7DEBD0ED1F7EAEED00842E2A /* Quick.framework */,
 			);
@@ -360,6 +359,7 @@
 				7DEBD0C01F6F27F100842E2A /* SwitchEntryCell.swift in Sources */,
 				7DEBD0C31F6F281000842E2A /* TextEntryCell.swift in Sources */,
 				7DEBD0DB1F7AB91400842E2A /* AvailableModels.swift in Sources */,
+				7D7B82B31F9D00F5001DD42B /* CollectionViewRadioButton.swift in Sources */,
 				7DEBD0D91F79D72E00842E2A /* CommonData.swift in Sources */,
 				7DEBD0BE1F6F26D300842E2A /* DataEntryTablePresenter.swift in Sources */,
 				7DEBD0981F6DDAD800842E2A /* AppDelegate.swift in Sources */,
@@ -584,6 +584,7 @@
 				7DEBD0A81F6DDAD800842E2A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7DEBD0E81F7EAE2300842E2A /* Build configuration list for PBXNativeTarget "unitspecs" */ = {
 			isa = XCConfigurationList;
@@ -592,6 +593,7 @@
 				7DEBD0EA1F7EAE2300842E2A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

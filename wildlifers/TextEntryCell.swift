@@ -2,6 +2,7 @@ import UIKit
 
 class TextEntryCell : UITableViewCell, DataEntryTableViewCell {
     var type = DataEntryCellType.Text
+    
     @IBOutlet weak var textView: UITextView!
     @IBOutlet weak var descriptionLabel: UILabel!
     

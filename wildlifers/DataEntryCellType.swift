@@ -25,6 +25,16 @@ extension DataEntryViewModel {
                         )
                     ))
                     break
+                case is HintString.Type:
+                    cellConfigurations.append((
+                        dataType: .Text,
+                        cellConfiguration: TextConfiguration(
+                            descriptionText:name.camelCaseToWords(),
+                            hintText:(value as! HintString).hint,
+                            enteredText:(value as! HintString).string
+                        )
+                    ))
+                    break
                 case is Bool.Type:
                     cellConfigurations.append((
                         dataType: .Switch,
@@ -40,7 +50,7 @@ extension DataEntryViewModel {
                         cellConfiguration: RadioButtonConfiguration(
                             descriptionText:name.camelCaseToWords(),
                             selectedOption:(value as! RadioButton).selectedOption,
-                            options:(value as! RadioButton).options
+                            options:(value as! RadioButton).options.map { $0.camelCaseToWords() }
                         )
                     ))
                     break
