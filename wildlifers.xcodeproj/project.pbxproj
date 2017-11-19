@@ -76,6 +76,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		7D367BE61FAF6666006A9FAB /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
+		7D367BE71FAF6666006A9FAB /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
+		7D367BED1FAF6691006A9FAB /* DataEntryInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataEntryInteractor.swift; sourceTree = "<group>"; };
+		7AA54B8DC99852D5DC98AB45 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		7D7B82B21F9D00F5001DD42B /* CollectionViewRadioButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewRadioButton.swift; sourceTree = "<group>"; };
 		7DEBD0941F6DDAD800842E2A /* wildlifers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = wildlifers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DEBD0971F6DDAD800842E2A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -143,6 +147,7 @@
 				7DEBD0E21F7EAE2300842E2A /* unitspecs */,
 				7DEBD0951F6DDAD800842E2A /* Products */,
 				7DEBD0EB1F7EAEED00842E2A /* Frameworks */,
+				7AA54B8DC99852D5DC98AB45 /* README.md */,
 			);
 			sourceTree = "<group>";
 		};
