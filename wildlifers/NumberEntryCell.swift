@@ -1,7 +1,8 @@
 import UIKit
 
-class NumberEntryCell : UITableViewCell, DataEntryTableViewCell {
-    var type = DataEntryCellType.Number
+class NumberEntryCell : UITableViewCell, DataEntryTableViewCell, UITextFieldDelegate {
+    var configuration: CellConfiguration?
+    
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var numberField: UITextField!
     
@@ -12,5 +13,11 @@ class NumberEntryCell : UITableViewCell, DataEntryTableViewCell {
         
         descriptionLabel.text = configuration.descriptionText
         numberField.text = String(configuration.number)
+        
+        self.configuration = configuration
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        self.endEditing(true)
     }
 }

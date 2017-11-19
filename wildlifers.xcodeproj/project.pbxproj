@@ -7,19 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7AA546230E76610F444CA10E /* DataTypeSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA5440AE56ED7D8C7140538 /* DataTypeSelectionViewController.swift */; };
+		7D367BE81FAF6666006A9FAB /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D367BE61FAF6666006A9FAB /* Realm.framework */; };
+		7D367BE91FAF6666006A9FAB /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D367BE71FAF6666006A9FAB /* RealmSwift.framework */; };
+		7D367BEB1FAF667A006A9FAB /* Realm.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7D367BE61FAF6666006A9FAB /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		7D367BEC1FAF667A006A9FAB /* RealmSwift.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7D367BE71FAF6666006A9FAB /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		7D367BEE1FAF6691006A9FAB /* DataEntryInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D367BED1FAF6691006A9FAB /* DataEntryInteractor.swift */; };
 		7D7B82B31F9D00F5001DD42B /* CollectionViewRadioButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D7B82B21F9D00F5001DD42B /* CollectionViewRadioButton.swift */; };
+		7DDF46E91FAF7CF0005178CB /* DataEntryTablePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DDF46E81FAF7CF0005178CB /* DataEntryTablePresenter.swift */; };
 		7DEBD0981F6DDAD800842E2A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DEBD0971F6DDAD800842E2A /* AppDelegate.swift */; };
 		7DEBD09F1F6DDAD800842E2A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7DEBD09E1F6DDAD800842E2A /* Assets.xcassets */; };
 		7DEBD0A21F6DDAD800842E2A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DEBD0A01F6DDAD800842E2A /* LaunchScreen.storyboard */; };
 		7DEBD0AA1F6DE2A800842E2A /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DEBD0A91F6DE2A800842E2A /* InitialViewController.swift */; };
-		7DEBD0AE1F6E029000842E2A /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DEBD0AD1F6E029000842E2A /* Realm.framework */; };
-		7DEBD0AF1F6E029000842E2A /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7DEBD0AD1F6E029000842E2A /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		7DEBD0B21F6E029A00842E2A /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DEBD0B11F6E029A00842E2A /* RealmSwift.framework */; };
-		7DEBD0B31F6E029A00842E2A /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7DEBD0B11F6E029A00842E2A /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7DEBD0B51F6E031C00842E2A /* RaptorNestActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DEBD0B41F6E031C00842E2A /* RaptorNestActivity.swift */; };
 		7DEBD0BA1F6EE00C00842E2A /* DataEntryCellType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DEBD0B91F6EE00C00842E2A /* DataEntryCellType.swift */; };
 		7DEBD0BC1F6F233D00842E2A /* DataEntryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DEBD0BB1F6F233D00842E2A /* DataEntryTableViewController.swift */; };
-		7DEBD0BE1F6F26D300842E2A /* DataEntryTablePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DEBD0BD1F6F26D300842E2A /* DataEntryTablePresenter.swift */; };
 		7DEBD0C01F6F27F100842E2A /* SwitchEntryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DEBD0BF1F6F27F100842E2A /* SwitchEntryCell.swift */; };
 		7DEBD0C31F6F281000842E2A /* TextEntryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DEBD0C21F6F281000842E2A /* TextEntryCell.swift */; };
 		7DEBD0C51F6F282700842E2A /* LocationEntryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DEBD0C41F6F282700842E2A /* LocationEntryCell.swift */; };
@@ -31,11 +33,7 @@
 		7DEBD0DB1F7AB91400842E2A /* AvailableModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DEBD0DA1F7AB91400842E2A /* AvailableModels.swift */; };
 		7DEBD0EE1F7EAEED00842E2A /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DEBD0EC1F7EAEED00842E2A /* Nimble.framework */; };
 		7DEBD0EF1F7EAEED00842E2A /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DEBD0ED1F7EAEED00842E2A /* Quick.framework */; };
-		7DEBD0F31F7EAF1E00842E2A /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7DEBD0F11F7EAF1E00842E2A /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		7DEBD0F41F7EAF1E00842E2A /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7DEBD0F21F7EAF1E00842E2A /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7DEBD0F61F7EB59900842E2A /* DataEntryCellTypeSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DEBD0F51F7EB59900842E2A /* DataEntryCellTypeSpec.swift */; };
-		7DEBD0F81F7EBB9B00842E2A /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DEBD0B11F6E029A00842E2A /* RealmSwift.framework */; };
-		7DEBD0F91F7EBB9D00842E2A /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DEBD0AD1F6E029000842E2A /* Realm.framework */; };
 		7DEBD0FC1F7ED29500842E2A /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DEBD0FB1F7ED29400842E2A /* StringExtensions.swift */; };
 /* End PBXBuildFile section */
 
@@ -50,14 +48,23 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		7D367BEA1FAF666E006A9FAB /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				7D367BEB1FAF667A006A9FAB /* Realm.framework in CopyFiles */,
+				7D367BEC1FAF667A006A9FAB /* RealmSwift.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7DEBD0B01F6E029000842E2A /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				7DEBD0B31F6E029A00842E2A /* RealmSwift.framework in Embed Frameworks */,
-				7DEBD0AF1F6E029000842E2A /* Realm.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -68,31 +75,28 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				7DEBD0F31F7EAF1E00842E2A /* Nimble.framework in CopyFiles */,
-				7DEBD0F41F7EAF1E00842E2A /* Quick.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		7AA5440AE56ED7D8C7140538 /* DataTypeSelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataTypeSelectionViewController.swift; sourceTree = "<group>"; };
+		7AA54B8DC99852D5DC98AB45 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		7D367BE61FAF6666006A9FAB /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
 		7D367BE71FAF6666006A9FAB /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
 		7D367BED1FAF6691006A9FAB /* DataEntryInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataEntryInteractor.swift; sourceTree = "<group>"; };
-		7AA54B8DC99852D5DC98AB45 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		7D7B82B21F9D00F5001DD42B /* CollectionViewRadioButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewRadioButton.swift; sourceTree = "<group>"; };
+		7DDF46E81FAF7CF0005178CB /* DataEntryTablePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataEntryTablePresenter.swift; sourceTree = "<group>"; };
 		7DEBD0941F6DDAD800842E2A /* wildlifers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = wildlifers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DEBD0971F6DDAD800842E2A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7DEBD09E1F6DDAD800842E2A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7DEBD0A11F6DDAD800842E2A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7DEBD0A31F6DDAD800842E2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7DEBD0A91F6DE2A800842E2A /* InitialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
-		7DEBD0AD1F6E029000842E2A /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
-		7DEBD0B11F6E029A00842E2A /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
 		7DEBD0B41F6E031C00842E2A /* RaptorNestActivity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RaptorNestActivity.swift; sourceTree = "<group>"; };
 		7DEBD0B91F6EE00C00842E2A /* DataEntryCellType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataEntryCellType.swift; sourceTree = "<group>"; };
 		7DEBD0BB1F6F233D00842E2A /* DataEntryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataEntryTableViewController.swift; sourceTree = "<group>"; };
-		7DEBD0BD1F6F26D300842E2A /* DataEntryTablePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataEntryTablePresenter.swift; sourceTree = "<group>"; };
 		7DEBD0BF1F6F27F100842E2A /* SwitchEntryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwitchEntryCell.swift; sourceTree = "<group>"; };
 		7DEBD0C21F6F281000842E2A /* TextEntryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextEntryCell.swift; sourceTree = "<group>"; };
 		7DEBD0C41F6F282700842E2A /* LocationEntryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationEntryCell.swift; sourceTree = "<group>"; };
@@ -106,8 +110,6 @@
 		7DEBD0E51F7EAE2300842E2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7DEBD0EC1F7EAEED00842E2A /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		7DEBD0ED1F7EAEED00842E2A /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
-		7DEBD0F11F7EAF1E00842E2A /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
-		7DEBD0F21F7EAF1E00842E2A /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 		7DEBD0F51F7EB59900842E2A /* DataEntryCellTypeSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataEntryCellTypeSpec.swift; sourceTree = "<group>"; };
 		7DEBD0FB1F7ED29400842E2A /* StringExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -117,8 +119,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7DEBD0B21F6E029A00842E2A /* RealmSwift.framework in Frameworks */,
-				7DEBD0AE1F6E029000842E2A /* Realm.framework in Frameworks */,
+				7D367BE81FAF6666006A9FAB /* Realm.framework in Frameworks */,
+				7D367BE91FAF6666006A9FAB /* RealmSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -128,21 +130,24 @@
 			files = (
 				7DEBD0EE1F7EAEED00842E2A /* Nimble.framework in Frameworks */,
 				7DEBD0EF1F7EAEED00842E2A /* Quick.framework in Frameworks */,
-				7DEBD0F81F7EBB9B00842E2A /* RealmSwift.framework in Frameworks */,
-				7DEBD0F91F7EBB9D00842E2A /* Realm.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7D367BEF1FAF6698006A9FAB /* interactors */ = {
+			isa = PBXGroup;
+			children = (
+				7D367BED1FAF6691006A9FAB /* DataEntryInteractor.swift */,
+				7DEBD0B91F6EE00C00842E2A /* DataEntryCellType.swift */,
+			);
+			name = interactors;
+			sourceTree = "<group>";
+		};
 		7DEBD08B1F6DDAD800842E2A = {
 			isa = PBXGroup;
 			children = (
-				7DEBD0F11F7EAF1E00842E2A /* Nimble.framework */,
-				7DEBD0F21F7EAF1E00842E2A /* Quick.framework */,
-				7DEBD0B11F6E029A00842E2A /* RealmSwift.framework */,
-				7DEBD0AD1F6E029000842E2A /* Realm.framework */,
 				7DEBD0961F6DDAD800842E2A /* wildlifers */,
 				7DEBD0E21F7EAE2300842E2A /* unitspecs */,
 				7DEBD0951F6DDAD800842E2A /* Products */,
@@ -163,6 +168,7 @@
 		7DEBD0961F6DDAD800842E2A /* wildlifers */ = {
 			isa = PBXGroup;
 			children = (
+				7D367BEF1FAF6698006A9FAB /* interactors */,
 				7DEBD0FA1F7ED27600842E2A /* helpers & extensions */,
 				7DEBD0D31F785D3B00842E2A /* presenters */,
 				7DEBD0D21F785D2800842E2A /* viewcontrollers */,
@@ -182,7 +188,6 @@
 			children = (
 				7DEBD0B41F6E031C00842E2A /* RaptorNestActivity.swift */,
 				7DEBD0DA1F7AB91400842E2A /* AvailableModels.swift */,
-				7DEBD0B91F6EE00C00842E2A /* DataEntryCellType.swift */,
 				7DEBD0D81F79D72E00842E2A /* CommonData.swift */,
 			);
 			name = models;
@@ -207,6 +212,7 @@
 			children = (
 				7DEBD0A91F6DE2A800842E2A /* InitialViewController.swift */,
 				7DEBD0BB1F6F233D00842E2A /* DataEntryTableViewController.swift */,
+				7AA5440AE56ED7D8C7140538 /* DataTypeSelectionViewController.swift */,
 			);
 			name = viewcontrollers;
 			sourceTree = "<group>";
@@ -214,7 +220,7 @@
 		7DEBD0D31F785D3B00842E2A /* presenters */ = {
 			isa = PBXGroup;
 			children = (
-				7DEBD0BD1F6F26D300842E2A /* DataEntryTablePresenter.swift */,
+				7DDF46E81FAF7CF0005178CB /* DataEntryTablePresenter.swift */,
 			);
 			name = presenters;
 			sourceTree = "<group>";
@@ -231,6 +237,8 @@
 		7DEBD0EB1F7EAEED00842E2A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7D367BE61FAF6666006A9FAB /* Realm.framework */,
+				7D367BE71FAF6666006A9FAB /* RealmSwift.framework */,
 				7DEBD0EC1F7EAEED00842E2A /* Nimble.framework */,
 				7DEBD0ED1F7EAEED00842E2A /* Quick.framework */,
 			);
@@ -264,6 +272,7 @@
 				7DEBD0911F6DDAD800842E2A /* Frameworks */,
 				7DEBD0921F6DDAD800842E2A /* Resources */,
 				7DEBD0B01F6E029000842E2A /* Embed Frameworks */,
+				7D367BEA1FAF666E006A9FAB /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -362,11 +371,12 @@
 				7DEBD0BA1F6EE00C00842E2A /* DataEntryCellType.swift in Sources */,
 				7DEBD0BC1F6F233D00842E2A /* DataEntryTableViewController.swift in Sources */,
 				7DEBD0C01F6F27F100842E2A /* SwitchEntryCell.swift in Sources */,
+				7D367BEE1FAF6691006A9FAB /* DataEntryInteractor.swift in Sources */,
 				7DEBD0C31F6F281000842E2A /* TextEntryCell.swift in Sources */,
 				7DEBD0DB1F7AB91400842E2A /* AvailableModels.swift in Sources */,
+				7DDF46E91FAF7CF0005178CB /* DataEntryTablePresenter.swift in Sources */,
 				7D7B82B31F9D00F5001DD42B /* CollectionViewRadioButton.swift in Sources */,
 				7DEBD0D91F79D72E00842E2A /* CommonData.swift in Sources */,
-				7DEBD0BE1F6F26D300842E2A /* DataEntryTablePresenter.swift in Sources */,
 				7DEBD0981F6DDAD800842E2A /* AppDelegate.swift in Sources */,
 				7DEBD0B51F6E031C00842E2A /* RaptorNestActivity.swift in Sources */,
 				7DEBD0CB1F6F299200842E2A /* SubdatumSegueCell.swift in Sources */,
@@ -374,6 +384,7 @@
 				7DEBD0FC1F7ED29500842E2A /* StringExtensions.swift in Sources */,
 				7DEBD0AA1F6DE2A800842E2A /* InitialViewController.swift in Sources */,
 				7DEBD0C71F6F284D00842E2A /* RadioButtonEntryCell.swift in Sources */,
+				7AA546230E76610F444CA10E /* DataTypeSelectionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -507,6 +518,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = wildlifers/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -523,6 +535,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = wildlifers/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

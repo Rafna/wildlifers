@@ -1,7 +1,8 @@
 import UIKit
 
-class RadioButtonEntryCell : UITableViewCell, DataEntryTableViewCell {
-    var type = DataEntryCellType.RadioButton
+class RadioButtonEntryCell : UITableViewCell, DataEntryTableViewCell, UICollectionViewDelegate {
+    var configuration: CellConfiguration?
+    
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var descriptionLabel: UILabel!
     
@@ -11,5 +12,12 @@ class RadioButtonEntryCell : UITableViewCell, DataEntryTableViewCell {
         }
         
         descriptionLabel.text = configuration.descriptionText
+        
+        self.configuration = configuration
+        self.collectionView.reloadData()
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        self.endEditing(true)
     }
 }

@@ -36,24 +36,6 @@ class RaptorObservation : Object, DataEntryViewModel {
     var time:Date = Date.init()
     var observations:String = ""
     var behaviors:String = ""
-    
-    func getDataEntryCellTypes() -> [(dataType:DataEntryCellType, cellConfiguration: CellConfiguration)] {
-        return [
-            (dataType:.Text, cellConfiguration:
-                TextConfiguration(
-                    descriptionText:"\(#keyPath(RaptorObservation.observations))".camelCaseToWords(),
-                    hintText:"",
-                    enteredText:""
-                )
-            ),
-            (dataType:.Text, cellConfiguration:
-                TextConfiguration(
-                    descriptionText:"\(#keyPath(RaptorObservation.behaviors))".camelCaseToWords(),
-                    hintText:"",
-                    enteredText:""
-                )
-            )]
-    }
 }
 
 class RaptorNestActivity : Object, DataEntryViewModel {
